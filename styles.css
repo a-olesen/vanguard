@@ -111,6 +111,8 @@ h2{
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
+    padding-top: 1rem;
+    text-indent: 1rem;
 }
 
 .innovation_content{
@@ -135,12 +137,29 @@ h2{
 .innovation_content button:hover{
     background-color: var(--red);
     transform: scale(1.1);
+}
 
 header{
     background-color: var(--red);
 }
 
-.
+p{
+    color: var(--black);
+    font-weight: 500;
+}
+
+.expertise_content{
+    padding-bottom: 1rem;
+}
+
+.offer_content div{ 
+    background-color: var(--blue);
+    color: var(--white);
+    margin: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
 
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
