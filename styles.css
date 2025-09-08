@@ -102,6 +102,7 @@ body {
 
 }
 
+
 h1{
     font-size: 2rem;    
     color: var(--blue);
@@ -121,6 +122,7 @@ h2{
 
 .innovation p{
     margin: 1rem auto;
+    color: var(--white);
 }
 
 .innovation_content button{
@@ -146,6 +148,7 @@ header{
 p{
     color: var(--black);
     font-weight: 500;
+    font-size: 1rem;
 }
 
 .expertise_content{
@@ -161,6 +164,161 @@ p{
     border-radius: 5px;
 }
 
+.offer_content p{
+    color: var(--white);
+}
+
+.offer_content{
+    padding-bottom: 3rem;
+}
+h3{
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.blue-background{
+    background-color: var(--blue);
+    padding-bottom: 1rem;
+}
+
+.results_content h2{
+    color: var(--white);
+    padding-top: 2rem;
+}
+
+.results_content p{
+    color: var(--white);
+}
+
+.results_content{
+    padding-bottom: 2rem;
+}
+
+.blue-background h3{
+    text-indent: 1rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.profit_table{
+    border-collapse: collapse; 
+    margin: 1rem 0;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.profit_div{
+    padding-bottom: 1.5rem;
+}
+
+.profit_table tr{
+    background-color: var(--black); 
+    color: var(--white); 
+    text-align: left;
+    font-weight: bold;
+}
+
+.profit_table th, .profit_table td{
+    text-align: center;
+    border: 1px solid var(--charcoal);
+    padding: 1.3rem 1.2rem;
+}
+
+.profit_table tbody tr:nth-of-type(odd) {
+    background-color: var(--charcoal);
+}
+
+.profit_table tbody tr:nth-child(1){
+    background-color: var(--black); 
+}
+
+footer{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer p{
+    color: var(--white);
+}
+
+footer{
+    padding-top: 1rem;
+}
+
+.footer_top{
+    padding: 1rem;
+}
+
+
+input, textarea{
+	display: block;
+    padding: 1rem;
+	margin-bottom: 1rem;
+	border: 3px solid var(--blue);
+	background-color: var(--white);
+    width: 100%;
+}
+
+.footer_button{
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .5s;
+    width: 100%;
+    margin-left: 1rem;
+}
+.footer_button:hover{
+    background-color: var(--red);
+    transform: scale(1.1);
+}
+
+.footer_button_container{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+address p{
+    text-align: center;
+    margin: 0.75rem auto;
+}
+
+.address_container{
+    padding-bottom: 1rem;
+}
+
+h1, h2, h3, button{
+  opacity: 0; /* Start invisible */
+  transform: translateY(-1.5rem); /* Start slightly above its final position */
+  animation: fadeInFromAbove 1s ease-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeInFromAbove {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at its natural position */
+  }
+}
+.offer_content div{
+transition: transform 0.3s ease-in-out; 
+}
+
+.offer_content div:hover{
+    transform: translateY(-0.3rem); 
+}
+
+
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -174,6 +332,8 @@ p{
     padding: 1rem;
     position: relative;
 }
+
+
 /* ADD ON TRANSITION ON HEIGHT */
 .bar {
     width: 50px;
