@@ -308,9 +308,9 @@ address p{
 }
 
 h1, h2, h3, button{
-  opacity: 0; /* Start invisible */
-  transform: translateY(-1.5rem); /* Start slightly above its final position */
-  animation: fadeInFromAbove 1s ease-out forwards; /* Apply the animation */
+  opacity: 0; 
+  transform: translateY(-1.5rem);
+  animation: fadeInFromAbove 1s ease-out forwards; 
 }
 
 @keyframes fadeInFromAbove {
@@ -320,7 +320,7 @@ h1, h2, h3, button{
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End at its natural position */
+    transform: translateY(0); 
   }
 }
 .offer_content div{
