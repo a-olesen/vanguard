@@ -71,6 +71,7 @@ body {
     font-family: var(--font);
 }
 
+
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -87,8 +88,7 @@ body {
     text-align: center;
     padding: 1rem;
     overflow: hidden;
-    color: var(--white);
-    align-content: center;
+    width: 100%;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -102,10 +102,19 @@ body {
 
 }
 
+header{
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    display: flex;
+}
+
 
 h1{
     font-size: 2rem;    
     color: var(--blue);
+    font-weight: bold;
+    float: left;
+    display:flex;
 }
 
 h2{
@@ -118,6 +127,10 @@ h2{
 
 .innovation_content{
     backdrop-filter: blur(10px);
+}
+
+.innovation_content h2{
+    color: var(--white);
 }
 
 .innovation p{
@@ -142,7 +155,8 @@ h2{
 }
 
 header{
-    background-color: var(--red);
+    background-color: var(--black);
+    border-bottom: 3px solid var(--blue);
 }
 
 p{
@@ -342,6 +356,7 @@ transition: transform 0.3s ease-in-out;
     position: relative;
     transition: ;
     height: 0;
+    transition: height 0.5s ease-in-out;
 }
 /* THIS ONE IS DONE FOR YOU */
 .bar::after {
@@ -367,22 +382,133 @@ transition: transform 0.3s ease-in-out;
     animation: stepUp 1s ease-in-out forwards;
 }
 
+nav {
+  background-color: var(--black);
+  margin-left: auto;
+}
+
+nav label{
+    float: right;
+}
+nav ul {
+  width: 100%;
+  margin:0;
+  padding:0;
+  list-style:none;
+  overflow:hidden;
+  text-align:center;
+  max-height: 0;
+}
+nav h2 {
+  visibility:hidden;
+  height:1px;
+}
+nav li a {
+  display:block;
+  font-family:sans-serif;
+  font-size:1.5rem;
+  padding:1rem;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-decoration:none;
+  color: var(--blue);
+  transition: background-color .3s ease-in;
+}
+nav a:hover, nav input:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+/* BUILDS THE MIDDLE LILNE OF THE HAMBURGER */
+nav label span {
+    background-color: white;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+/* BUILDS THE TOP AND BOTTOM LINES OF THE HAMBURGER*/
+nav label span:before, nav label span:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+nav label span:before {
+    top: .75rem;
+}
+nav label span:after {
+    top: -.75rem;
+}
+nav input {
+  display:none;
+}
+/* ADDS HEIGHT THE NAV WHEN IT'S DROPPED DOWN */
+input:checked ~ ul {
+    max-height: 500px;
+}
+/* MAKES THE MIDDLE LINE OF THE HAMBURGER DISAPPEAR */
+input:checked ~ nav label span {
+    background: transparent;
+}
+/* ROTATES THE TOP LINE OF THE HAMBURGER INTO ONE SIDE OF THE X */
+input:checked ~ nav label span:before {
+    transform: rotate(-45deg);
+}
+/* ROTATES THE BOTTOM LINE OF THE HAMBURGER INTO ONE SIDE OF THE X */
+input:checked ~ nav label span:after {
+    transform: rotate(45deg);
+}
+/* LOCATION OF THE HAMBURGER */
+input:checked ~ nav label:not(.steps) span:before, input:checked ~ nav label:not(.steps) span:after {
+    top: 0;
+}
+@media screen and (min-width: 600px){
+  nav ul {
+    overflow:visible;
+    position:absolute;
+    top: 1.5rem;
+    left:.5rem;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  nav li a {
+    display:inline-block;
+}
+  nav label span, input {
+    display:none;
+  }
+}
+
 
 /* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width: 600px){
 
     #results {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .results-container {
+    #results .container{
         flex-direction: row;
         justify-content: space-between;
     }
-    .results-table {
+    .profit_table {
         width: 50%;
     }
-    .bar-chart {
+    #bar-chart {
         width: 50%;
     }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
+
+
